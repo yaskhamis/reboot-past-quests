@@ -1,9 +1,10 @@
 package piscine
 
 func BasicJoin(elems []string) string {
-	result := ""
-	for _, str := range elems {
-		result += str
+	v := elems
+	f := ""
+	for i := 0; i < len(v); i++ {
+		f += v[i]
 	}
-	return result
+	return f
 }

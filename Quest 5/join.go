@@ -1,14 +1,14 @@
 package piscine
 
 func Join(strs []string, sep string) string {
-	if len(strs) == 0 {
-		return ""
+	v := strs
+	f := ""
+	for i := 0; i < len(v); i++ {
+		if i < len(v)-1 {
+			f += v[i] + sep
+		} else {
+			f += v[i]
+		}
 	}
-
-	result := strs[0]
-	for i := 1; i < len(strs); i++ {
-		result += sep + strs[i]
-	}
-
-	return result
+	return f
 }
